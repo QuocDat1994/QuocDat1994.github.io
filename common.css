@@ -1,0 +1,165 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #17171b;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 0.2fr 1.5fr 2fr;
+  margin: 8vh 10vw;
+}
+
+/* @media screen and (min-width: 600px) {
+  main {
+    display: block;
+    margin: auto;
+  }
+} */
+
+section {
+  background-color: #31313a;
+}
+
+/* ================================================= */
+
+section.menu {
+  margin-top: 10px;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.menu nav a {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: small;
+  padding: 15px 10px;
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.85);
+  background-color: #31313a;
+}
+
+.menu nav a:hover,
+.menu nav a.active {
+  color: #ff9800;
+  transition: all 0.3s ease 0s;
+}
+
+.menu nav a:first-of-type {
+  border-radius: 7px 7px 0 0;
+}
+
+.menu nav a:nth-child(2) {
+  border-top: 0.2px solid rgba(255, 255, 255, 0.85);
+}
+
+.menu nav a:last-of-type {
+  border-radius: 0 0 7px 7px;
+}
+
+.menu nav a p {
+  margin-top: 8px;
+}
+
+/* ================================================= */
+
+section.profile {
+  position: relative;
+  height: 85vh;
+  border-radius: 5px;
+  box-shadow: -15px -15px rgba(99, 99, 99, 0.1);
+}
+
+.profile .background {
+  background-image: url("https://3.bp.blogspot.com/--92RvhRf3f4/UtqaQQ3IKoI/AAAAAAAAG5c/LLEig70BmAA/s1600/MilkyWayRainbow_640px.jpg");
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+}
+
+.profile .avatar {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: 0;
+  right: 0;
+  margin: -12vh auto auto auto;
+  border: 3px solid #31313a;
+  border-radius: 100%;
+  background-image: url("https://i.imgur.com/hccYIVU.jpg");
+  background-size: cover;
+}
+
+.profile .info {
+  margin-top: 15vh;
+  text-align: center;
+}
+
+.profile .info .name {
+  font-size: xx-large;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.profile .info .job {
+  font-size: x-large;
+  color: #ff9800;
+  margin: 15px auto;
+}
+
+.profile .bottom-button-group {
+  width: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  bottom: 0;
+}
+
+.profile .bottom-button-group div {
+  display: inline;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: bold;
+  padding: 20px;
+  border-top: 0.2px solid rgba(255, 255, 255, 0.85);
+}
+
+.profile .bottom-button-group div:first-of-type {
+  border-right: 0.2px solid rgba(255, 255, 255, 0.85);
+}
+
+.profile .bottom-button-group div > p,
+i {
+  display: inline;
+  margin: auto 5px;
+}
+
+.profile .bottom-button-group div:hover,
+.profile .bottom-button-group div:hover {
+  color: #ff9800;
+  transition: all 0.3s ease 0s;
+}
+
+/* ================================================= */
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: inset 1em 0 1em -1em black;
+}
+
+.about {
+  display: inline;
+}
+/* ================================================= */
+.resume {
+  display: none;
+}
+/* ================================================= */
+.work {
+  display: none;
+}
+/* ================================================= */
+.contact {
+  display: none;
+}

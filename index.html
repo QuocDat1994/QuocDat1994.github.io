@@ -13,39 +13,53 @@
       crossorigin="anonymous"
     />
     <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto"
     />
+    <script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
   </head>
   <body>
     <main>
       <section class="menu">
         <nav>
-          <a>
+          <a id="menu-about">
             <i class="fas fa-user"></i>
             <p>About</p>
           </a>
-          <a>
+          <a id="menu-resume">
             <i class="fas fa-file-alt"></i>
             <p>Resume</p>
           </a>
-          <a>
+          <a id="menu-works">
             <i class="fas fa-folder-open"></i>
-            <p>Work</p>
+            <p>Works</p>
           </a>
-          <a>
+          <a id="menu-contact">
             <i class="fas fa-envelope"></i>
             <p>Contact</p>
           </a>
         </nav>
       </section>
       <section class="profile">
-        <div class="background"></div>
-        <div class="avatar"></div>
+        <div class="background" title="Image credit to Royce Bair"></div>
+        <div class="avatar" title="I don't like selfie, sorry... :("></div>
         <div class="info">
           <p class="name">Truong Nguyen Quoc Dat</p>
-          <p class="job">Web Developer</p>
-          <div>dsadsadsa</div>
+          <p id="job" class="job"></p>
+          <div>
+            <a href="https://codepen.io/quocdat1994" target="_blank">
+              <i class="fab fa-codepen"></i>
+            </a>
+            <a href="https://github.com/QuocDat1994" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/dattruongnq" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="skype:live:quocdat1994_3?chat">
+              <i class="fab fa-skype"></i>
+            </a>
+          </div>
         </div>
         <div class="bottom-button-group">
           <div>
@@ -58,19 +72,82 @@
           </div>
         </div>
       </section>
-      <section class="card about">
-        info
+      <section id="about" class="card">
+        <div>
+          <h1>
+            <div class="heading-circle"></div>
+            <p>About Me</p>
+          </h1>
+          <div>
+            <p class="text bold">
+              Hello! I’m Truong Nguyen Quoc Dat.
+            </p>
+            <p class="text">
+              As a developer, I have 3 years experience in developing software
+              and web application.
+            </p>
+            <p class="text">
+              Can easily collaborate in a team or work independently. Have
+              experience working directly with Japanese clients.
+            </p>
+            <p class="text">
+              I enjoy problems solving and self-research new technology.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h1>
+            <div class="heading-circle"></div>
+            <p>Personal Detail</p>
+          </h1>
+          <div class="info">
+            <div class="row">
+              <p>Age:</p>
+              <p>24</p>
+            </div>
+            <div class="row">
+              <p>Gender:</p>
+              <p>Male</p>
+            </div>
+            <div class="row">
+              <p>Nationality:</p>
+              <p>Vietnamese</p>
+            </div>
+            <div class="row">
+              <p>Phone:</p>
+              <p>037.955.7887</p>
+            </div>
+            <div class="row">
+              <p>Address:</p>
+              <p>District 3, HCM City</p>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="card resume">
+      <section id="resume" class="card">
         resume
       </section>
-      <section class="card work">
+      <section id="works" class="card">
         work
       </section>
-      <section class="card contact">
+      <section id="contact" class="card">
         contact
       </section>
     </main>
+    <script>
+      let job = document.getElementById("job");
+
+      let typewriter = new Typewriter(job, {
+        loop: true
+      });
+
+      typewriter
+        .typeString("Web Developer")
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString("Software Developer")
+        .pauseFor(2500)
+        .start();
+    </script>
   </body>
-  <footer></footer>
 </html>

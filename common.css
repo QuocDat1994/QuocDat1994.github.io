@@ -7,18 +7,15 @@ body {
 main {
   display: grid;
   grid-template-columns: 0.2fr 1.5fr 2fr;
-  margin: 8vh 10vw;
+  /* margin: 8vh 10vw; */
+  margin: 4em 10em;
 }
-
-/* @media screen and (min-width: 600px) {
-  main {
-    display: block;
-    margin: auto;
-  }
-} */
-
 section {
   background-color: #31313a;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /* ================================================= */
@@ -41,6 +38,7 @@ section.menu {
 
 .menu nav a:hover,
 .menu nav a.active {
+  cursor: pointer;
   color: #ff9800;
   transition: all 0.3s ease 0s;
 }
@@ -147,21 +145,45 @@ i {
   margin: auto 5px;
 }
 
-.profile .bottom-button-group div:hover,
 .profile .bottom-button-group div:hover {
+  cursor: pointer;
   color: rgba(255, 152, 0);
   transition: all 0.3s ease 0s;
 }
 
 /* ================================================= */
+
+section.card {
+  display: none;
+  height: 82vh;
+  margin-top: 0.8em;
+}
+
 .card {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  overflow: scroll;
   font-size: 1.1em;
+  border-radius: 10px;
   box-shadow: inset 1em 0 1em -1em black;
 }
 
-.card h1 {
+/* .card:hover {
+  overflow: scroll;
+} */
+
+.card.active {
+  display: inline !important;
+}
+
+.card .sub-section {
+  margin-top: 30px;
+}
+
+.card .sub-section:first-of-type {
+  margin-top: 0;
+}
+
+.card .sub-section .heading {
+  position: relative;
   padding: 30px;
   margin-bottom: 30px;
   font-size: 1.2em;
@@ -170,11 +192,11 @@ i {
   border-bottom: 0.2px solid rgba(255, 255, 255, 0.85);
 }
 
-.card h1 .heading-circle {
+.card .sub-section .heading .heading-circle {
+  position: absolute;
+  margin: -4px -15px;
   width: 30px;
   height: 30px;
-  position: absolute;
-  margin: -5px -15px;
   border-radius: 100%;
   background-image: linear-gradient(
     to left,
@@ -183,50 +205,115 @@ i {
   );
 }
 
-.card .text {
-  padding: 0px 30px 10px 30px;
+.card .sub-section .content {
+  padding: 0 30px;
   line-height: 1.8em;
 }
 
-.card .bold {
-  font-weight: bold;
+.card .sub-section .content p {
+  margin-bottom: 0.5em;
 }
 
 /* ================================================= */
 
-#about {
-  display: inline;
-}
-
-.card .info {
-  padding: 0 30px;
+.card .personal-detail {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  font-size: 1em;
 }
 
-.card .info .row {
-  padding: 8px 0;
+.card .personal-detail .cell {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.card .info .row p {
-  display: inline-block;
+  grid-template-columns: 0.8fr 1.2fr;
 }
 
-.card .info .row p:nth-child(2) {
+.card .personal-detail .cell:last-of-type {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+}
+
+.card .personal-detail .cell p:nth-child(2) {
   font-style: italic;
 }
 
 /* ================================================= */
-#resume {
-  display: none;
+.experience {
+  margin-bottom: 30px;
 }
+
+.experience .description {
+  font-size: 0.9em;
+}
+
+.time {
+  width: fit-content;
+  padding: 0 5px;
+  font-size: 0.8em;
+  color: rgba(255, 152, 0);
+  border: 1px solid rgba(255, 152, 0);
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1em;
+}
+
+.skill .column {
+  margin-bottom: 1em;
+}
+
+.skill i {
+  font-size: 1.5em;
+  color: rgba(255, 152, 0);
+}
+
+.skill p {
+  display: inline;
+  vertical-align: text-bottom;
+  font-weight: bold;
+}
+
+.skill ul {
+  margin-left: 1em;
+  list-style: inside;
+}
+
 /* ================================================= */
 #works {
-  display: none;
 }
+
 /* ================================================= */
-#contact {
-  display: none;
+
+.contact a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: rgba(255, 152, 0);
+  transition: all 0.3s ease 0s;
+}
+
+/* ================================================= */
+
+/* width  */
+::-webkit-scrollbar {
+  width: 10px;
+  position: fixed;
+}
+
+::-webkit-scrollbar-corner {
+  opacity: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }

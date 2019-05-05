@@ -5,8 +5,6 @@
     <title>Quoc Dat Online CV</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="common.css" />
-    <link rel="import" href="test.html" />
-
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -28,19 +26,19 @@
     <main>
       <section class="menu">
         <nav>
-          <a id="menu-about">
+          <a id="menu-about" class="active" data-target="#about">
             <i class="fas fa-user"></i>
             <p>About</p>
           </a>
-          <a id="menu-resume">
+          <a id="menu-resume" data-target="#resume">
             <i class="fas fa-file-alt"></i>
             <p>Resume</p>
           </a>
-          <a id="menu-works">
+          <a id="menu-works" data-target="#works">
             <i class="fas fa-folder-open"></i>
             <p>Works</p>
           </a>
-          <a id="menu-contact">
+          <a id="menu-contact" data-target="#contact">
             <i class="fas fa-envelope"></i>
             <p>Contact</p>
           </a>
@@ -72,16 +70,14 @@
             <p>Download CV</p>
             <i class="fas fa-file-download"></i>
           </div>
-          <div>
+          <div onclick="$('#menu-contact').click()">
             <p>Contact me</p>
             <i class="fas fa-location-arrow"></i>
           </div>
         </div>
       </section>
       <section id="about" class="card"></section>
-      <section id="resume" class="card">
-        resume
-      </section>
+      <section id="resume" class="card"></section>
       <section id="works" class="card">
         work
       </section>
@@ -90,6 +86,7 @@
       </section>
     </main>
     <script>
+      // ==========================
       let job = document.getElementById("job");
 
       let typewriter = new Typewriter(job, {
@@ -104,7 +101,27 @@
         .pauseFor(2500)
         .start();
 
-      $("#about").load("about_me.html");
+      // ==========================
+
+      $("#contact").show();
+
+      $("a[id^='menu']").on("click", function() {
+        if ($(this).hasClass("active")) {
+          return false;
+        }
+
+        let targetId = $(this).data("target");
+
+        $("a[id^='menu']").removeClass("active");
+        $(this).addClass("active");
+
+        $(".card").hide();
+        $(targetId).show("slow");
+      });
+
+      $("#about").load("about.html");
+      $("#resume").load("resume.html");
+      $("#contact").load("contact.html");
     </script>
   </body>
 </html>

@@ -21,6 +21,11 @@
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
   </head>
   <body>
     <main>
@@ -78,12 +83,8 @@
       </section>
       <section id="about" class="card"></section>
       <section id="resume" class="card"></section>
-      <section id="works" class="card">
-        work
-      </section>
-      <section id="contact" class="card">
-        contact
-      </section>
+      <section id="works" class="card"></section>
+      <section id="contact" class="card"></section>
     </main>
     <script>
       // ==========================
@@ -103,7 +104,7 @@
 
       // ==========================
 
-      $("#contact").show();
+      $("#works").show();
 
       $("a[id^='menu']").on("click", function() {
         if ($(this).hasClass("active")) {
@@ -121,6 +122,7 @@
 
       $("#about").load("about.html");
       $("#resume").load("resume.html");
+      $("#works").load("works.html");
       $("#contact").load("contact.html");
     </script>
   </body>

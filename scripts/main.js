@@ -50,4 +50,12 @@ $(document).ready(() => {
       $(targetId).show("slow");
     }
   });
+
+  // ==============================================
+
+  $(window).resize(() => {
+    if ($(window).width() < 768) {
+      // $(".card.info").css("display", "block");
+    }
+  });
 });

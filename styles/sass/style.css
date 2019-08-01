@@ -188,7 +188,7 @@ body {
   display: none;
 }
 
-.container .card.info#resume {
+.container .card.info#works {
   display: block;
 }
 
@@ -511,12 +511,12 @@ body {
   padding-left: 1.5rem;
 }
 
-.experience .section-inner article .mark {
+.experience .section-inner article .time {
   position: relative;
   padding-top: 0.5rem !important;
 }
 
-.experience .section-inner article .mark:before {
+.experience .section-inner article .time:before {
   content: "";
   width: 0.5rem;
   height: 0.5rem;
@@ -527,11 +527,11 @@ body {
   background: rgba(255, 255, 255, 0.85);
 }
 
-.experience .section-inner article .mark.current {
+.experience .section-inner article .time.current {
   color: #ff9800;
 }
 
-.experience .section-inner article .mark.current:before {
+.experience .section-inner article .time.current:before {
   background: #ff9800;
 }
 

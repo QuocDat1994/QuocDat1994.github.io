@@ -1,0 +1,84 @@
+body
+  height: 100vh
+  background: $background-color
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: $font-poppins
+  color: $text-color
+
+.container
+  width: 70%
+  height: 85%
+  display: grid
+  grid-template: 1fr / 0.12fr 0.8fr 1fr
+  justify-content: center
+
+  .card
+    min-width: 320px
+    position: relative
+    background: $card-color
+    border-radius: 5px
+    overflow: hidden
+    
+    &.profile
+      height: 100%
+      min-height: 480px
+      box-shadow: -15px -15px rgba(99, 99, 99, 0.1)
+
+    &.info
+      height: 95%
+      align-self: center
+      box-shadow: inset 15px 0 15px -15px black
+      overflow: auto
+
+      &#about,
+      &#resume,
+      &#works,
+      &#contact
+        display: none
+
+      &#resume
+        display: block
+
+@media (max-width: 768px)
+  body
+    height: auto
+
+  .container 
+    width: 97%
+    height: auto
+    grid-template: 1fr / 1fr
+
+    .card
+      &.info
+        height: auto
+        margin-top: 5%
+        box-shadow: none
+        overflow: unset
+
+        &#about,
+        &#resume,
+        &#works,
+        &#contact
+          display: block
+
+@media (min-width: 1024px) and (orientation: portrait)
+  .container 
+    width: 97%
+    height: 50%
+
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape)
+  .container 
+    width: 85%
+    height: 60%
+
+@media (max-width: 1024px)
+  html 
+    font-size: 0.8rem
+
+
+
+
+
+

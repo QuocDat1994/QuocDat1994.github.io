@@ -1,0 +1,82 @@
+.profile-background 
+  width: 100%
+  height: 55%
+  background: url('https://i.ibb.co/XVGDd68/FrmhDHq.jpg')
+  background-size: cover
+  background-position: center
+  position: relative
+  +cut-background(200px, 50px)
+
+.avatar 
+  +avatar-position(40%)
+  position: absolute
+
+  img
+    width: 100%
+    border-radius: 100%
+    +border(5px, 5px, 5px, 5px, $card-color)
+    box-sizing: border-box
+    
+.profile-info
+  text-align: center
+  height: 45%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  
+  > * 
+    margin-bottom: 1rem
+
+  .name 
+    font-size: 1.5rem
+
+  .job 
+    font-size: 1.2rem
+    color: $text-active-color
+
+  .link
+    font-size: 1.2rem
+    display: block
+    
+    a
+      color: $text-color
+      text-decoration: none
+      padding: 0 0.2rem
+      @extend %hover
+
+.bottom-button-group
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 8%
+  display: grid
+  grid-template: 1fr / 1fr 1fr
+  
+  .button
+    +border($top: 0.2px)
+    display: flex
+    align-items: center
+    justify-content: center
+    @extend %hover
+      
+    &.download
+      +border(0.2px, 0.2px)
+
+    span
+      margin-right: 0.5rem
+
+@media (max-width: 768px) and (orientation: landscape)
+  .avatar 
+    +avatar-position(25%)
+    
+  .profile-background 
+    +cut-background(350px)
+          
+@media (min-width: 768px) and (max-width: 1023px)
+  .avatar 
+    +avatar-position(25%)
+    
+  .profile-background 
+    +cut-background(350px)
+
+

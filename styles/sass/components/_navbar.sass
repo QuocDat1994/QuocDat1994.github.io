@@ -1,0 +1,50 @@
+
+.navbar
+  z-index: 10
+
+  ul
+    display: grid
+    border-radius: 5px 0 0 5px
+    background: $card-color
+
+    li 
+      +border($bottom: 0.2px)
+
+      &:last-child
+        +border($bottom: 0)
+        
+      a
+        display: block
+        padding: 1rem 0
+        color: $text-color
+        font-size: 0.8em
+        text-align: center
+        text-transform: uppercase
+        text-decoration: none
+        @extend %hover
+        
+        &.active
+          color: $text-active-color
+
+        i
+          margin-bottom: 0.5em
+
+@media (max-width: 768px) 
+  .navbar
+    ul
+      width: 97%
+      position: fixed
+      top: 0
+      grid-template-columns: repeat(4, 1fr)
+      border-radius: 0 0 5px 5px
+      
+      li
+        +border($right: 0.2px, $bottom: 0)
+      
+        &:last-child
+          +border($right: 0)
+      
+@media (max-width: 320px)
+  .navbar
+    ul
+      width: 100%

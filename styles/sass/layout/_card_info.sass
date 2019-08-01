@@ -1,0 +1,17 @@
+.container
+  .card
+    &.info      
+      padding-bottom: 1rem
+
+      .content 
+        font-size: 1rem
+        line-height: 1.5rem
+        padding: 0 3rem 0.5rem 3rem
+
+        &:before
+          +before-after-style(1px, 50%)
+          left: 1.5rem
+          background: linear-gradient(rgba(255, 255, 255, 0.2), $card-color)
+
+        p
+          padding-top: 1rem

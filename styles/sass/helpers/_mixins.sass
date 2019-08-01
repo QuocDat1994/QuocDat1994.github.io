@@ -1,0 +1,33 @@
+=avatar-position($width)
+  width: $width
+  left: calc((100% - #{$width}) / 2)
+  bottom: calc((#{$width} * -15) / 40)
+  z-index: 2
+
+=cut-background($width, $height: 50px)
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    bottom: -1px
+    border-bottom: $height solid $card-color
+
+  &::before
+    border-right: $width solid transparent
+
+  &::after
+    right: 0
+    border-left: $width solid transparent
+
+
+=border($top: 0, $right: 0, $bottom: 0, $left: 0, $color: $text-color)
+  border-top: $top solid $color
+  border-right: $right solid $color
+  border-bottom: $bottom solid $color
+  border-left: $left solid $color
+
+=before-after-style($width, $height, $position: absolute)
+  content: ""
+  width: $width
+  height: $height
+  position: $position

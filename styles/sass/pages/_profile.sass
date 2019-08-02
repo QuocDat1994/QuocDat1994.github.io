@@ -51,16 +51,16 @@
   height: 8%
   display: grid
   grid-template: 1fr / 1fr 1fr
+  +border(0.4px)
   
   .button
-    +border($top: 0.2px)
     display: flex
     align-items: center
     justify-content: center
     @extend %hover
       
     &.download
-      +border(0.2px, 0.2px)
+      +border($right: 0.4px)
 
     span
       margin-right: 0.5rem

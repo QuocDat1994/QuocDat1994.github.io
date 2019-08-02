@@ -1,0 +1,40 @@
+.blocker
+  z-index: 3
+
+  .modal 
+    height: auto
+    border-radius: 0 
+    padding: 0
+    color: $text-color
+    background: $card-color
+
+    img
+      width: 100%
+
+    .project-name
+      font-size: 1.5rem
+      font-weight: normal
+      padding: 1.5rem 1.5rem 0 1.5rem 
+      marign: 0
+      +border($bottom: 0)
+
+      &:before
+        content: none  
+
+    .project-company
+      padding: 0.2rem 1.5rem 0 1.5rem
+      opacity: 0.6
+
+    .project-description
+      padding: 1.5rem 1.5rem 0 1.5rem
+      font-size: 0.9em
+      marign: 0
+
+    .project-link
+      padding: 1.5rem
+      color: $text-color
+      font-size: 0.8em
+      text-decoration: none
+      @extend %hover
+      position: relative
+      display: inline-block

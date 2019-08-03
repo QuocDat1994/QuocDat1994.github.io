@@ -39,10 +39,9 @@
     display: block
     
     a
-      color: $text-color
-      text-decoration: none
       padding: 0 0.2rem
-      @extend %hover
+      +anchor()
+
 
 .bottom-button-group
   position: absolute
@@ -51,16 +50,16 @@
   height: 8%
   display: grid
   grid-template: 1fr / 1fr 1fr
-  +border(0.4px)
+  +border(0.3px)
   
   .button
     display: flex
     align-items: center
     justify-content: center
-    @extend %hover
+    +anchor()
       
     &.download
-      +border($right: 0.4px)
+      +border($right: 0.3px)
 
     span
       margin-right: 0.5rem

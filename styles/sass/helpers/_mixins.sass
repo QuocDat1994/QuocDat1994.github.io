@@ -19,8 +19,7 @@
     right: 0
     border-left: $width solid transparent
 
-
-=border($top: 0, $right: 0, $bottom: 0, $left: 0, $color: $text-color)
+=border($top: 0, $right: 0, $bottom: 0, $left: 0, $color: $border-color)
   border-top: $top solid $color
   border-right: $right solid $color
   border-bottom: $bottom solid $color
@@ -31,3 +30,20 @@
   width: $width
   height: $height
   position: $position
+
+=anchor($size: 1rem)
+  color: $text-color
+  font-size: $size
+  text-decoration: none
+  
+  &:hover
+    color: $text-active-color
+    transition: all 0.3s ease-in-out
+    cursor: pointer
+
+=line-color($direction: "")
+  @if $direction != ""
+    background: linear-gradient(#{$direction}, rgba(255, 255, 255, 0.2), $card-color)
+  @else
+    background: linear-gradient(rgba(255, 255, 255, 0.2), $card-color)
+  

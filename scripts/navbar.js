@@ -9,7 +9,7 @@ const navBarEvent = () => {
     $(".navbar a").removeClass("active");
     $(this).addClass("active");
 
-    if ($(window).width() < 768) {
+    if ($(window).width() <= 768) {
       $("html").animate(
         { scrollTop: $(targetId).offset().top - $(".navbar ul").height() },
         "slow"
@@ -19,18 +19,16 @@ const navBarEvent = () => {
       $(targetId).show("slow");
     }
   });
+
+  $(window).resize(function() {
+    if ($(window).width() <= 768) {
+      $(".card.info").show("slow");
+    } else {
+      const activeCardID = "#" + $(".navbar a.active").data("target");
+      $(".card.info").hide();
+      $(activeCardID).show();
+    }
+  });
 };
 
 export default navBarEvent;
-// const autoType = () => {
-//   const $job = $("#job");
-//   const typewriter = new Typewriter(job, { loop: true });
-
-//   typewriter
-//     .typeString("Web Developer")
-//     .pauseFor(2500)
-//     .deleteAll()
-//     .typeString("Software Developer")
-//     .pauseFor(2500)
-//     .start();
-// };

@@ -1,6 +1,6 @@
 
 .navbar
-  z-index: 2
+  z-index: 3
 
   ul
     display: grid
@@ -16,12 +16,9 @@
       a
         display: block
         padding: 1rem 0
-        color: $text-color
-        font-size: 0.8em
         text-align: center
         text-transform: uppercase
-        text-decoration: none
-        @extend %hover
+        +anchor(0.8rem)
         
         &.active
           color: $text-active-color

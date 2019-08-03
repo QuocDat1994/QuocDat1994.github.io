@@ -1,29 +1,8 @@
 .experience
-  position: relative
-  display: grid
-  grid-template-columns: 1fr 1fr
-  padding: 0 1rem 0.5rem 1.5rem !important
-  
-  &:before
-    height: 100% !important
-
   .section-inner
-    position: relative
 
-    &:first-child
-      padding-right: 1rem
-    
-    &:nth-child(2)
-      &:before
-        +before-after-style(1px, 100%)
-        background: linear-gradient(rgba(255, 255, 255, 0.2), $card-color)    
-
-    &.coding
-      grid-column: 1 / span 2
-        
-      article
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
+    &:first-of-type
+      padding-right: 1rem;
 
     h2
       padding-top: 1rem
@@ -35,18 +14,9 @@
         padding-right: 0.2rem
         color: $text-active-color
 
-      p 
-        font-size: 1.2rem
-
     article
       font-size: 0.8rem
       padding-top: 1rem
-      position: relative
-
-      &:after
-        +before-after-style(100%, 1px)
-        top: 1rem
-        background: linear-gradient(to right, rgba(255, 255, 255, 0.2), $card-color)
 
       > *
         padding-left: 1.5rem
@@ -62,15 +32,15 @@
           border-radius: 100%
           background: $text-color
 
-        &.current
-          color: $text-active-color
-          
-          &:before
-            background: $text-active-color
+      .time.current
+        color: $text-active-color
+        
+        &:before
+          background: $text-active-color
 
       .position
         color: rgba(255, 255, 255, 1)
-        font-size: 1rem        
+        font-size: 1rem
         padding-top: 0.5rem !important
 
       .organization
@@ -84,4 +54,10 @@
       .skill
         font-size: 1rem 
 
+  .section-inner.coding
+    grid-column: 1 / span 2
+      
+    article
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
         

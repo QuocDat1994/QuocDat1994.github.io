@@ -5,13 +5,18 @@ const modalEvent = () => {
     const projectName = $(e.currentTarget).data("target");
     const data = projectData[projectName];
 
-    $(".project-img").attr("src", data.img);
+    $(".project-img").attr("src", data.image);
     $(".project-name").html(data.name);
     $(".project-company").html(data.company);
     $(".project-description").html(data.description);
-    $(".project-link").attr("href", data.link);
+
+    if (data.link != "") {
+      $(".project-link").attr("href", data.link);
+      $(".project-link").css("display", "block");
+    } else {
+      $(".project-link").css("display", "none");
+    }
   });
-  // $("#test").click();
 };
 
 export default modalEvent;

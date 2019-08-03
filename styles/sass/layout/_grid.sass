@@ -1,0 +1,19 @@
+.grid
+  display: grid
+  grid-template-columns: 1fr 1fr
+  padding: 0 1.5rem 1.5rem 1.5rem !important
+
+  &:before
+    content: none !important
+
+  .section-inner
+    &:before
+      +before-after-style(1px, 100%)
+      +line-color()
+
+    article
+      position: relative
+
+      &:before
+        +before-after-style(100%, 1px)
+        +line-color("to right")

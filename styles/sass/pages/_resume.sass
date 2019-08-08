@@ -57,7 +57,52 @@
   .section-inner.coding
     grid-column: 1 / span 2
       
+    h2 
+      padding-bottom: 1rem
+
     article
       display: grid
       grid-template-columns: repeat(3, 1fr)
-        
+
+.testimonial
+  section 
+    padding-top: 1rem
+
+  .quote 
+    font-style: italic
+    text-align: center
+    position: relative
+    padding: 0 1rem
+
+    &:before  
+      content: "“"
+      position: absolute
+      top: 30%
+      left: -0.2rem
+      font-size: 3rem
+
+    &:after  
+      content: "”"
+      position: absolute
+      right: 0.5rem
+      font-size: 3rem
+      bottom: -30%
+
+  .referrer
+    text-align: center
+    padding-top: rem
+
+    img
+      width: 4rem
+      border-radius: 100%
+
+    p
+      padding-top: 0 !important
+
+    p:last-of-type,
+    a
+      font-size: 0.8rem
+      opacity: 0.6
+
+    a 
+      +anchor(0.8rem)

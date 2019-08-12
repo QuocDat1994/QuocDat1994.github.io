@@ -202,7 +202,7 @@ body {
 .container .card.info#about, .container .card.info#resume, .container .card.info#works, .container .card.info#contact {
   display: none;
 }
-.container .card.info#resume {
+.container .card.info#about {
   display: block;
 }
 

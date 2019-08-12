@@ -19,7 +19,9 @@ const goToContact = () => {
 
 const downloadCV = () => {
   $(".button.download").on("click", function() {
-    $(".navbar a[name=contact]").click();
+    window.open(
+      "https://drive.google.com/file/d/1RvCJ63FCzvsDR9WX3hfKn50_fmuDJriM/view"
+    );
   });
 };
 

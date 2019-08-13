@@ -20,7 +20,7 @@ const goToContact = () => {
 const downloadCV = () => {
   $(".button.download").on("click", function() {
     window.open(
-      "https://drive.google.com/file/d/1RvCJ63FCzvsDR9WX3hfKn50_fmuDJriM/view"
+      "https://drive.google.com/file/d/1XiNzPuDW6fgavhheuW3srN8ecXNEpdtL/view"
     );
   });
 };
